@@ -1,0 +1,46 @@
+.section-heading {
+	margin-bottom: 30px;
+}
+
+.section-heading .heading-title {
+	position: relative;
+	color: var(--secondary-color);
+	font-family: var(--font-heading);
+	font-size: 3.5em;
+	letter-spacing: 1px;
+	background: url(../images/decor-heading.webp) bottom left/auto 8px no-repeat;
+}
+
+.section-heading .heading-text {
+	margin-top: 20px;
+	font-size: 1.075em;
+	color: var(--bs-black);
+	line-height: 1.6;
+}
+
+.section-heading .heading-button {
+	margin-top: 20px;
+}
+
+.section-gap {
+	padding: 50px 0;
+}
+
+.section-introduction .introduction-images .link-default {
+	border-radius: 6px;
+	overflow: hidden;
+	width: 100%;
+	transition: var(--transition-default);
+}
+
+.section-introduction .introduction-images .link-default:hover {
+	opacity: .8;
+}
+
+.section-introduction .introduction-image {
+	border-radius: 6px;
+	overflow: hidden;
+	width: 100%;
+	transition: var(--transition-default);
+	height: 100%;
+}
