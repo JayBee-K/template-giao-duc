@@ -217,4 +217,38 @@ $(function () {
 	handleContentDetail();
 
 	handleChangeImageIntroduction();
+
+	if ($('#slider-gallery').length) {
+		new Swiper('#slider-gallery .swiper', {
+			speed: 500,
+			spaceBetween: 8,
+			slidesPerView: 3,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: true,
+			},
+			loop: 0,
+			navigation: {
+				nextEl: "#slider-gallery .slider-buttons .slider-button_next",
+				prevEl: "#slider-gallery .slider-buttons .slider-button_prev",
+			},
+			breakpoints: {
+				1359: {
+					slidesPerView: 3,
+				},
+				991: {
+					slidesPerView: 3.5,
+				},
+				768: {
+					slidesPerView: 2.5,
+				},
+				375: {
+					slidesPerView: 1.5,
+				},
+				320: {
+					slidesPerView: 1,
+				}
+			},
+		});
+	}
 });
