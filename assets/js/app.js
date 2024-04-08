@@ -218,6 +218,22 @@ $(function () {
 
 	handleChangeImageIntroduction();
 
+	if ($('#slider-feedback').length) {
+		new Swiper('#slider-feedback .swiper', {
+			speed: 500,
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: true,
+			},
+			navigation: {
+				nextEl: "#slider-feedback .slider-navigation .slider-navigation_next",
+				prevEl: "#slider-feedback .slider-navigation .slider-navigation_prev",
+			},
+		});
+	}
+
 	if ($('#slider-gallery').length) {
 		new Swiper('#slider-gallery .swiper', {
 			speed: 500,
@@ -229,8 +245,8 @@ $(function () {
 			},
 			loop: 0,
 			navigation: {
-				nextEl: "#slider-gallery .slider-buttons .slider-button_next",
-				prevEl: "#slider-gallery .slider-buttons .slider-button_prev",
+				nextEl: "#slider-gallery .slider-navigation .slider-navigation_next",
+				prevEl: "#slider-gallery .slider-navigation .slider-navigation_prev",
 			},
 			breakpoints: {
 				1359: {
