@@ -218,6 +218,22 @@ $(function () {
 
 	handleChangeImageIntroduction();
 
+	if ($('#slider-hero').length) {
+		new Swiper('#slider-hero .swiper', {
+			speed: 500,
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: true,
+			},
+			navigation: {
+				nextEl: "#slider-hero .slider-navigation .slider-navigation_next",
+				prevEl: "#slider-hero .slider-navigation .slider-navigation_prev",
+			},
+		});
+	}
+
 	if ($('#slider-feedback').length) {
 		new Swiper('#slider-feedback .swiper', {
 			speed: 500,

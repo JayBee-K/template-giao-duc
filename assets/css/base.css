@@ -7,7 +7,7 @@
 
 :root {
 	--transition-default: 0.3s all ease-in-out;
-	--font-theme: 'Inter', Arial, Helvetica, sans-serif;
+	--font-theme: Arial, Helvetica, sans-serif;
 	--font-heading: 'SVN-Bali', Arial, Helvetica, sans-serif;
 	--size-theme: 14px;
 }
