@@ -202,7 +202,68 @@ const handleChangeImageIntroduction = function () {
 	}
 }
 
+const handleCollapseDescription = function () {
+	if ($('#handleDescription').length > 0) {
+		let handleDescription = $('#handleDescription');
+		let limitHeight = handleDescription.attr('data-limit');
 
+		if (handleDescription.height() > limitHeight) {
+			let originalHeight = handleDescription.height() + 40;
+			handleDescription.attr('data-original', originalHeight + 40);
+			handleDescription.css({
+				'--limit': limitHeight + 'px',
+				'--original': originalHeight + 'px'
+			});
+			handleDescription.addClass('limitDescription');
+		} else {
+			handleDescription.removeAttr('data-limit');
+			handleDescription.find('#handleDescriptionButton').remove();
+		}
+
+		handleDescription.find('#handleDescriptionButton a').click(function () {
+			let handleDescriptionButton = $(this);
+			let textOriginal = ' Xem chi tiết';
+			let textChanged = ' Thu gọn';
+
+			if (handleDescription.hasClass('originalDescription')) {
+				handleDescription.removeClass('originalDescription');
+				handleDescriptionButton.html(`${textOriginal} <i class="fas fa-caret-down"></i>`);
+			} else {
+				handleDescription.addClass('originalDescription');
+				handleDescriptionButton.html(`${textChanged} <i class="fas fa-caret-up"></i>`);
+			}
+		});
+	}
+}
+
+const handleCounter = function () {
+	if ($('#handleCounter').length && $('#handleCounter .handleCounterItem').length) {
+		let i = 0;
+		$(window).scroll(function () {
+			let counterOffsetTop = $('#handleCounter').offset().top - window.innerHeight;
+			if (i === 0 && $(window).scrollTop() > counterOffsetTop) {
+				$('#handleCounter .handleCounterItem').each(function () {
+					let counterItem = $(this),
+						counterItemValue = counterItem.attr('data-value'),
+						counterItemText = counterItem.attr('data-text');
+					$({countNum: counterItem.text()}).animate(
+						{countNum: counterItemValue},
+						{
+							duration: 2000,
+							easing: 'swing',
+							step: function () {
+								counterItem.text(Math.floor(this.countNum));
+							},
+							complete: function () {
+								counterItem.html(this.countNum.toString() + (counterItemText !== '' ? '&nbsp;' + counterItemText : ''));
+							}
+						});
+				});
+				i = 1;
+			}
+		});
+	}
+}
 $(function () {
 	handleApplyCollapse($('#header-navigation > ul'), true, true);
 	handleCallMenu();
@@ -217,6 +278,10 @@ $(function () {
 	handleContentDetail();
 
 	handleChangeImageIntroduction();
+
+	handleCollapseDescription();
+
+	handleCounter();
 
 	if ($('#slider-hero').length) {
 		new Swiper('#slider-hero .swiper', {

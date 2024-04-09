@@ -5,9 +5,49 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'SVN-Poppins';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(../fonts/svn-poppins/SVN-PoppinsLight.ttf) format('woff2');
+}
+
+@font-face {
+	font-family: 'SVN-Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(../fonts/svn-poppins/SVN-Poppins.ttf) format('woff2');
+}
+
+@font-face {
+	font-family: 'SVN-Poppins';
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url(../fonts/svn-poppins/SVN-PoppinsMedium.ttf) format('woff2');
+}
+
+@font-face {
+	font-family: 'SVN-Poppins';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(../fonts/svn-poppins/SVN-PoppinsSemiBold.ttf) format('woff2');
+}
+
+@font-face {
+	font-family: 'SVN-Poppins';
+	font-style: normal;
+	font-weight: 800;
+	font-display: swap;
+	src: url(../fonts/svn-poppins/SVN-PoppinsBold.ttf) format('woff2');
+}
+
 :root {
 	--transition-default: 0.3s all ease-in-out;
-	--font-theme: Arial, Helvetica, sans-serif;
+	--font-theme: 'SVN-Poppins', Arial, Helvetica, sans-serif;
 	--font-heading: 'SVN-Bali', Arial, Helvetica, sans-serif;
 	--size-theme: 14px;
 }

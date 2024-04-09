@@ -296,7 +296,7 @@
 		height: 45px;
 	}
 
-	.header.is-scroll .header-navigation > ul .navigation-logo > a > img{
+	.header.is-scroll .header-navigation > ul .navigation-logo > a > img {
 		height: 43px;
 	}
 
@@ -403,6 +403,33 @@
 
 	.footer .footer-item .footer-list .footer-list_item {
 		font-size: 1em;
+	}
+
+	.seo-content .seo-title {
+		font-size: 2.2em;
+		margin-bottom: 15px;
+		padding-bottom: 10px;
+	}
+
+	.detail-content h2,
+	.seo-content .seo-description h2 {
+		font-size: 1.3em;
+	}
+
+	.counter-item {
+		padding: 15px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+
+	.counter-item .counter-item_number {
+		font-size: 1.75em;
+	}
+
+	.counter-item .counter-item_title {
+		font-size: 1.075em;
 	}
 }
 
