@@ -479,6 +479,18 @@
 	.enrollment-wrapper .enrollment-inner {
 		padding: 40px 20px;
 	}
+
+	.article-detail .article-title {
+		font-size: 2em;
+		line-height: 1.1;
+	}
+
+	.sidebar-article {
+		border-left: 0;
+		border-top: 5px solid #f3f3f3;
+		padding-left: 0;
+		padding-top: 15px;
+	}
 }
 
 @media screen and (max-width: 768px) {
