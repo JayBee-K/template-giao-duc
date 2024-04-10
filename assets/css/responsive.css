@@ -431,6 +431,54 @@
 	.counter-item .counter-item_title {
 		font-size: 1.075em;
 	}
+
+	.vision-card .vision-title {
+		font-size: 1.45em;
+	}
+
+	.education_small .education-item .education-title > a,
+	.education-large .education-item .education-item_content .education-item_title > a {
+		font-size: 1.3em;
+	}
+
+	.education-large .education-item .education-item_content .education-item_sub {
+		font-size: 1.075em;
+	}
+
+	.vision-card .vision-desc,
+	.education_small .education-item .education-desc,
+	.education-large .education-item .education-item_content .education-item_desc,
+	.why-card .why-text {
+		font-size: 1em;
+	}
+
+	.education-large:before, .education-large:after {
+		top: unset;
+		transform: translateX(-50%) rotate(-270deg);
+		left: 50%;
+		right: unset;
+	}
+
+	.education-large:before {
+		top: -5.4rem;
+	}
+
+	.education-large:after {
+		bottom: -5.4rem;
+	}
+
+	.section-teacher {
+		background-position: center bottom;
+	}
+
+	.why-card .why-title {
+		font-size: 1.45em;
+		margin-bottom: 30px;
+	}
+
+	.enrollment-wrapper .enrollment-inner {
+		padding: 40px 20px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -441,5 +489,13 @@
 	.contact-inner {
 		width: 100%;
 		padding-left: 15px;
+	}
+
+	.enrollment-wrapper {
+		margin-top: 50px;
+	}
+
+	.enrollment-wrapper .enrollment-icon {
+		top: -80px;
 	}
 }
