@@ -208,8 +208,8 @@ const handleCollapseDescription = function () {
 		let limitHeight = handleDescription.attr('data-limit');
 
 		if (handleDescription.height() > limitHeight) {
-			let originalHeight = handleDescription.height() + 40;
-			handleDescription.attr('data-original', originalHeight + 40);
+			let originalHeight = handleDescription.height() + 75;
+			handleDescription.attr('data-original', originalHeight + 75);
 			handleDescription.css({
 				'--limit': limitHeight + 'px',
 				'--original': originalHeight + 'px'
@@ -227,10 +227,10 @@ const handleCollapseDescription = function () {
 
 			if (handleDescription.hasClass('originalDescription')) {
 				handleDescription.removeClass('originalDescription');
-				handleDescriptionButton.html(`${textOriginal} <i class="fas fa-caret-down"></i>`);
+				handleDescriptionButton.html(`${textOriginal} <i class="fal fa-angle-down ms-1"></i>`);
 			} else {
 				handleDescription.addClass('originalDescription');
-				handleDescriptionButton.html(`${textChanged} <i class="fas fa-caret-up"></i>`);
+				handleDescriptionButton.html(`${textChanged} <i class="fal fa-angle-up ms-1"></i>`);
 			}
 		});
 	}
